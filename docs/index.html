@@ -1,6 +1,10 @@
+<!doctype html>
 <html>
   <head>
     <title>Clarity Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -8,8 +12,55 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "bg3tc43kj4");
     </script>
+    <style type="text/tailwindcss">
+      @tailwind base;
+      @layer base {
+        h1 {
+          @apply text-2xl;
+        }
+        h2 {
+          @apply text-xl;
+        }
+        h3 {
+          @apply text-lg;
+        }
+        a {
+          @apply text-blue-600 underline;
+        }
+      }
+
+      @tailwind components;
+      @tailwind utilities;
+    </style>
   </head>
   <body>
-    <h1>hello clarity</h1>
+    <div class="p-4">
+      <div class="mb-4">
+        <h1 class="text-3xl font-bold">hello clarity</h1>
+      </div>
+
+      <div class="mb-4">
+        <a href="/clarity-demo/index.html?linked=1">リンクテキスト</a>
+      </div>
+
+      <div class="mb-4">
+        <button class="
+            py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shdaow-md
+            hover:bg-blue-700
+            focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75
+        ">ボタン</button>
+      </div>
+
+      <div>
+        <form>
+          <label for="text-input">氏名を入力してください</label>
+          <input
+            id="text-input"
+            class="block p-2 border rounded-md"
+            data-clarity-mask="True"
+          />
+        </form>
+      </div>
+    </div>
   </body>
 </html>
